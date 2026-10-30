@@ -4,7 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const links = [
+type NavLink = {
+  href: string;
+  label: string;
+  italic?: boolean;
+};
+
+const links: NavLink[] = [
   { href: "/about", label: "About" },
   { href: "/art", label: "Art" },
   {
@@ -13,7 +19,7 @@ const links = [
     italic: true,
   },
   { href: "/contact", label: "Contact" },
-] as const;
+];
 
 export default function Header() {
   const pathname = usePathname();

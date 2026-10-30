@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-const links = [
+type NavLink = {
+  href: string;
+  label: string;
+  italic?: boolean;
+};
+
+const links: NavLink[] = [
   { href: "/about", label: "About" },
   { href: "/art", label: "Art" },
   {
@@ -9,7 +15,7 @@ const links = [
     italic: true,
   },
   { href: "/contact", label: "Contact" },
-] as const;
+];
 
 export default function Footer() {
   return (
@@ -57,7 +63,15 @@ export default function Footer() {
             @lauraroberton
           </a>
 
-          <a href="" className="facebook ">
+          <p className="mt-6 text-sm uppercase tracking-[0.18em] text-muted">
+            Facebook
+          </p>
+          <a
+            href="https://www.facebook.com/Laurakatemod"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block border-b border-foreground/20 pb-0.5 transition-colors hover:border-foreground"
+          >
             Laurakatemod
           </a>
           <p className="mt-8 text-sm text-muted">© 2026 Laura Roberton</p>
