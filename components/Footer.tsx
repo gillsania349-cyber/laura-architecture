@@ -14,6 +14,7 @@ const links: NavLink[] = [
     label: "Architectural design",
     italic: true,
   },
+  { href: "/architectural-services", label: "Architectural services" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -25,7 +26,6 @@ export default function Footer() {
           <p className="font-display text-2xl tracking-tight">Laura Roberton</p>
           <p className="mt-3 max-w-xs text-lg leading-relaxed text-muted">
             Botanical relief sculpture — architecture, landscape and nature.
-            Melbourne.
           </p>
         </div>
 

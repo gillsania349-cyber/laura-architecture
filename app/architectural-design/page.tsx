@@ -5,28 +5,32 @@ export const metadata: Metadata = {
   title: "Architectural design",
 };
 
-const projects = [
+type Project = {
+  src: string;
+  title: string;
+  place: string;
+  description?: string;
+};
+
+const projects: Project[] = [
+  {
+    src: "/images/architecture-quarry-bay.jpg",
+    title: "Out of the Ordinary",
+    place: "Architecture studio project — Quarry Bay, Hong Kong, 2025",
+    description:
+      "A low pavilion on the wooded slopes of Mount Parker Road, beside the Quarry Bay reservoir. A long, textured roof shelters the building, while screens of shifting vertical fins filter light and views. Planted gardens and gravel paths carry the landscape through the spaces, so architecture and nature read as one.",
+  },
   {
     src: "/images/etsy/03-edenhope.jpg",
     title: "Edenhope residency",
     place: "5 Sisters artist residency — Lake Wallace",
   },
   {
-    src: "/images/etsy/06-highview-park.jpg",
-    title: "Highview park walk",
-    place: "Botanical cast — landscape study",
-  },
-  {
-    src: "/images/etsy/02-found-in-the-garden.jpg",
-    title: "Found in the Garden",
-    place: "Architecture, landscape and nature",
-  },
-  {
     src: "/images/etsy/07-internal-external.jpg",
     title: "Internal/External.2",
     place: "Sculptural form — threshold of space",
   },
-] as const;
+];
 
 export default function ArchitecturalDesignPage() {
   return (
@@ -69,6 +73,11 @@ export default function ArchitecturalDesignPage() {
                 {project.title}
               </h2>
               <p className="mt-2 text-lg italic text-muted">{project.place}</p>
+              {project.description ? (
+                <p className="mt-4 text-lg leading-relaxed text-foreground/80">
+                  {project.description}
+                </p>
+              ) : null}
             </div>
           </article>
         ))}

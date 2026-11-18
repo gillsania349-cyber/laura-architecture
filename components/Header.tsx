@@ -18,6 +18,7 @@ const links: NavLink[] = [
     label: "Architectural design",
     italic: true,
   },
+  { href: "/architectural-services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ];
 

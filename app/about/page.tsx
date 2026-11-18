@@ -58,8 +58,8 @@ export default function AboutPage() {
           2026 5 Sisters Residency at the Edenhope Artist Residency.
         </p>
 
-        <div className="mt-10 grid items-start gap-8 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:gap-12">
-          <figure className="relative aspect-[4/3] overflow-hidden bg-[#ebe6df] md:aspect-[3/4]">
+        <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-stretch md:gap-12">
+          <figure className="relative aspect-[4/3] overflow-hidden bg-[#ebe6df] md:aspect-auto md:h-full">
             <Image
               src="/images/about_me_clear.jpg"
               alt="Laura Roberton presenting her work"
@@ -72,14 +72,17 @@ export default function AboutPage() {
             </figcaption>
           </figure>
 
-          <figure className="overflow-hidden border border-foreground/10 bg-paper shadow-[0_20px_50px_-28px_rgba(28,27,25,0.35)]">
+          <figure className="self-start border border-foreground/10 bg-white p-4 shadow-[0_20px_50px_-28px_rgba(28,27,25,0.35)] md:p-6">
+            <p className="border-b border-black/70 pb-2 text-[0.7rem] uppercase tracking-[0.18em] text-black/60">
+              The Edenhope &amp; District Echo · 10 June 2026 · Page 9
+            </p>
             <Image
-              src="/images/press-edenhope-echo.png"
-              alt="Full Edenhope & District Echo page featuring Laura Roberton’s 5 Sisters Residency"
-              width={592}
-              height={865}
-              className="h-auto w-full"
-              sizes="(max-width: 768px) 100vw, 55vw"
+              src="/images/press-edenhope-echo-article.png"
+              alt="Edenhope & District Echo article: Emerging artist Laura Roberton awarded 5 Sisters Residency"
+              width={458}
+              height={422}
+              className="mt-4 h-auto w-full"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </figure>
         </div>
@@ -87,7 +90,7 @@ export default function AboutPage() {
 
       <section className="mt-24 md:mt-32">
         <h2 className="font-display text-3xl tracking-tight md:text-4xl">
-          Our team
+          Community
         </h2>
         <p className="mt-4 max-w-xl text-xl leading-relaxed text-muted md:text-[1.25rem]">
           Making together — botanical casts, clay, and community in the studio.
@@ -95,8 +98,8 @@ export default function AboutPage() {
 
         <figure className="relative mt-10 aspect-[16/10] w-full overflow-hidden md:aspect-[21/10]">
           <Image
-            src="/images/our-team.png"
-            alt="Our team — workshop participants making botanical relief sculptures with Laura"
+            src="/images/our-team.jpg"
+            alt="Community — workshop participants making botanical relief sculptures with Laura"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 1180px"
